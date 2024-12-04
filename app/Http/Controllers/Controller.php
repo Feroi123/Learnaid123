@@ -10,7 +10,7 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::all();
-        return view('tasks.index', compact('tasks'));
+        return view('dashboard', compact('tasks')); // Ensure you pass tasks to the view
     }
 
     public function store(Request $request)
